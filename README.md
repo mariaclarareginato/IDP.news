@@ -12,6 +12,10 @@
 
 
 
+
+
+
+
 📰 IDP News – Portal de Notícias do Colégio Técnico Instituto Dom Pedro II
 
 **IDP News** é um portal institucional desenvolvido com o objetivo de centralizar e divulgar notícias, eventos, avisos e informações relevantes do Instituto Dom Pedro II de forma acessível, moderna e organizada.
@@ -58,6 +62,23 @@ A coordenadora pedagógica **Profa. Mariana Souza** sugeriu a criação de um po
   
 
 ---
+
+## 🚀 Como Executar o Projeto Localmente
+
+No bash
+# Clone o repositório
+
+https://github.com/Vini-Nice/IDP.git
+
+# Acesse a pasta
+cd idp
+
+# Instale as dependências
+
+npm install  Node.js, Express, Cors, Path e Inputmask
+
+# Inicie o servidor de desenvolvimento
+npm run dev
 
 
 👨‍💻 Desenvolvido por: 
