@@ -6,7 +6,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.x", 
+    "axios": "^1.10.0",
+    "inputmask": "^5.0.9",
+    "next": "13.x",
     "react": "18.x",
     "react-dom": "18.x"
   }
