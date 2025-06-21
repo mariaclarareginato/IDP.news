@@ -3,17 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Roboto, Merriweather } from 'next/font/google';
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
-const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export default function ListaEventos() {
   const [eventos, setEventos] = useState([]);
@@ -104,7 +94,7 @@ export default function ListaEventos() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className={`${roboto.className} text-lg`}>Carregando eventos...</p>
+        <p className={`text-lg`}>Carregando eventos...</p>
       </div>
     );
   }
@@ -112,10 +102,10 @@ export default function ListaEventos() {
   if (error) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-        <p className={`${roboto.className} text-red-500 mb-4`}>{error}</p>
+        <p className={`text-red-500 mb-4`}>{error}</p>
         <button
           onClick={() => router.push('/')}
-          className={`${roboto.className} text-blue-600 hover:text-blue-800`}
+          className={`text-blue-600 hover:text-blue-800`}
         >
           Voltar para a página inicial
         </button>
@@ -129,10 +119,10 @@ export default function ListaEventos() {
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h1 className={`${merriweather.className} text-4xl font-bold mb-4`}>
+            <h1 className={`text-4xl font-bold mb-4`}>
               Eventos
             </h1>
-            <p className={`${roboto.className} text-lg text-blue-100 max-w-2xl mx-auto`}>
+            <p className={`text-lg text-blue-100 max-w-2xl mx-auto`}>
               Confira os próximos eventos e atividades da nossa instituição. Fique por dentro de todas as oportunidades de aprendizado e networking.
             </p>
           </div>
@@ -187,7 +177,7 @@ export default function ListaEventos() {
             <svg className="w-16 h-16 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <p className={`${roboto.className} text-gray-600 text-lg`}>
+            <p className={`text-gray-600 text-lg`}>
               Nenhum evento disponível no momento.
             </p>
           </div>
@@ -209,10 +199,10 @@ export default function ListaEventos() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <h2 className={`${merriweather.className} text-xl font-semibold text-gray-800 mb-3 line-clamp-2 hover:text-blue-600 transition-colors duration-300`}>
+                  <h2 className={`text-xl font-semibold text-gray-800 mb-3 line-clamp-2 hover:text-blue-600 transition-colors duration-300`}>
                     {evento.titulo}
                   </h2>
-                  <p className={`${roboto.className} text-gray-600 mb-4 line-clamp-3`}>
+                  <p className={`text-gray-600 mb-4 line-clamp-3`}>
                     {evento.texto}
                   </p>
                   <div className="space-y-2 text-sm text-gray-500">
